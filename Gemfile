@@ -1,6 +1,5 @@
 # A sample Gemfile
-source "http://yumrepo.sys.comcast.net/automation/gems/"
-source "http://yumrepo.sys.comcast.net/gems/"
+source "http://rubygems.org/"
 
 gem "thong"
 gem "rspec"
