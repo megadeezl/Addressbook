@@ -1,0 +1,22 @@
+# @markup markdown
+# @title Addressbook Operations Documentation
+# @author Eric Robinson
+
+#TODO: Template: Customize this document!
+
+## Addressbook
+
+This document is your Team documentation.  It could be consumed by
+both the engineering and the operations teams.
+
+### Project Description
+This is what my service does and why it exists
+
+### Architecture
+- See the [Architecture Page](file.Architecture.html)
+
+- See the [Project Level Rdoc](top-level-namespace.html)
+
+
+### User Level Documentation
+See the [User Level Documentation](file.PublicReadMe.html)

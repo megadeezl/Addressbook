@@ -1,0 +1,60 @@
+%define is_six %(lsb_release -r |grep -q 6. && echo 1 || echo 0)
+%define is_five %(lsb_release -r |grep -q 5. && echo 1 || echo 0)
+%define _topdir <%= File.expand_path("~/tmp/packagebuilder/") %>
+%define _prefix /
+%define _builddir <%= File.expand_path("~/tmp/packagebuilder/") %>
+
+%if %is_six
+%define _buildrootdir %{_builddir}
+%define buildroot %{_buildrootdir}/<%= @config["project"]["name"] %>-buildroot
+%endif
+
+%define _rpmdir <%= File.expand_path("~/packages/") %>
+%define _tmppath /tmp
+Summary: <%= @config["project"]["description"] %>
+Name: <%= @config["project"]["name"] %>
+Version: <%= @config["project"]["version"] %>
+Release: <%= @config["project"]["release"] %>
+License: <%= @config["rpm"]["license"] %>
+Group: Development/Languages
+Source: %{name}.tar.gz
+
+%if %is_five
+BuildRoot: <%= File.expand_path("~/tmp/packagebuilder/") %>/%{name}-buildroot
+%endif
+
+AutoReqProv: no
+<% unless @config["rpm"]["dependencies"].nil? or @config["rpm"]["dependencies"].empty? %>
+Requires: <%= @config["rpm"]["dependencies"] %>
+<% end %>
+BuildArch: <%= @config["rpm"]["arch"] %>
+
+%description
+<%= @config["project"]["description"] %>
+
+%prep
+
+
+%install
+--install--
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+--files--
+
+%pre
+--pre--
+
+%post
+--post--
+
+%preun
+--preun--
+
+%postun
+--postun--
+
+%changelog

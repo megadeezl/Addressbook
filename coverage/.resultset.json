@@ -1,7 +1,40 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/erobin08/DEV/Addressbook/src/app/support/addressbook/lib/addressbook.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/erobin08/DEV/Addressbook/src/app/support/addressbook/lib/addressbook/my_module.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ]
     },
-    "timestamp": 1386283314
+    "timestamp": 1413382539
   }
 }

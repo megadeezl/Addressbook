@@ -1,0 +1,25 @@
+# @markup markdown
+# @title Addressbook Documentation
+# @author Eric Robinson
+
+#TODO: Template: Basic Ruby App framework 
+
+## Addressbook
+
+This document is your Team documentation.  It could be consumed by
+both the engineering and the operations teams.
+
+### Project Description
+Addressbook app is a part duex of a Helloworld app - getting familiar with Ruby 
+
+### Architecture
+- See the [Architecture Page](file.Architecture.html)
+
+- See the [Project Level Rdoc](top-level-namespace.html)
+
+
+### Operations
+For information on how to operate this application see [Operations Documentation]()
+
+### User Level Documentation
+See the [User Level Documentation](file.PublicReadMe.html)

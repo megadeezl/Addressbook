@@ -1,0 +1,30 @@
+project:
+  name: "addressbook"
+  path: "/app/support/"
+  ruby: "/app/interpreters/ruby/1.9.3/"
+  version: "0.0.0"
+  release: "0"
+  description: ""
+  homepage: "https://megadeezl.com"
+  authors: "Eric Robinson"
+  email: "erobinso_2000@yahoo.com"
+  gem: false
+  clean_up: true
+  run_pre_build_rake: ture
+
+
+rpm:
+  arch: "noarch"
+  license: "Comcast"
+  dependencies: "auto-ruby auto-ruby-bundler"
+
+gem:
+  summary: "Summary: "
+  dependencies: ""
+
+build:
+  run_tests: true
+  create_rdoc_web_page: true
+  create_arch_diagram: true
+  build_rpm: true
+  remove_old_rpms_from_yum_repo: true

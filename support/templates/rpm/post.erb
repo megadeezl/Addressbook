@@ -1,0 +1,45 @@
+RUBY=<%= @config["project"]["ruby"] %>
+PROJECT=<%= @config["project"]["name"] %>
+
+<% if @config["rpm"]["create_current_link"] %>
+    PROJECT_PATH=<%= @config["project"]["path"] %><%= @config["project"]["name"] %>/<%= @config["project"]["name"] %>-<%= @config["project"]["version"] %>
+<% else %>
+    PROJECT_PATH=<%= @config["project"]["path"] %><%= @config["project"]["name"] %>
+<% end %>
+
+echo "Installing gems and dependencies:  Using ruby at $RUBY"
+export PATH=$RUBY/bin:$PATH
+export RUBYLIB=$RUBY/lib
+
+# Backup the gemrc file and write a new one for us to use during install
+if [ -e /etc/gemrc ]
+then mv /etc/gemrc /etc/gemrc.back
+  MOVEDETC=1
+  echo "gem: --no-ri --no-rdoc --bindir $RUBY/bin/" > /etc/gemrc
+else
+  echo "gem: --no-ri --no-rdoc --bindir $RUBY/bin/" > /etc/gemrc
+fi
+if [ -e /root/.gemrc ]
+then mv /root/.gemrc /root/.gemrc.back
+  MOVEDROOT=1
+  echo "gem: --no-ri --no-rdoc --bindir $RUBY/bin/" > /root/.gemrc
+else
+  echo "gem: --no-ri --no-rdoc --bindir $RUBY/bin/" > /root/.gemrc
+fi
+
+
+cd $PROJECT_PATH
+$RUBY/bin/bundle install --local --binstubs=$RUBY/bin
+
+<% if @config["project"]["gem"] %>
+gem install *.gem
+<% end %>
+
+# Move the gemrc back
+if [ -n "${MOVEDETC:+x}" ]
+  then mv /etc/gemrc.back /etc/gemrc
+fi
+
+if [ -n "${MOVEDROOT:+x}" ]
+  then mv /root/.gemrc.back /root/.gemrc
+fi

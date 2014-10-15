@@ -1,12 +1,7 @@
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
-Customer: Eric Address: 4908 Gina Ct Telephone Number: (856)924-1098
+{:entry=>{:entry=>"Customer: {:name=>\"Eric\", :address=>\"4908 Gina Ct\", :phone=>\"(856)924-1098\"} Address: 123 Any Street Telephone Number: (215)-123-1234"}}
+{:entry=>{:entry=>"Customer: {:name=>\"Eric\", :address=>\"400 Jena Ct\", :phone=>\"(865)943-1111\"} Address: 123 Any Street Telephone Number: (215)-123-1234"}}
+{:entry=>{:entry=>"Customer: {:name=>\"Eric\", :address=>\"400 Jena Ct\", :phone=>\"(865)943-1111\"} Address: 123 Any Street Telephone Number: (215)-123-1234"}}
+{:entry=>{:entry=>"Customer: {:name=>\"Eric\", :address=>\"400 Jena Ct\", :phone=>\"(865)943-1111\"} Address: 123 Any Street Telephone Number: (215)-123-1234"}}
+{:entry=>{:entry=>"Customer: Eric Address: 400 Jena Ct Telephone Number: (865)943-1111"}}
+{:entry=>{:entry=>"Customer: Eric Address: 400 Jena Ct Telephone Number: (865)943-1111"}}
+{:entry=>{:entry=>"Customer: Eric Address: 400 Jena Ct Telephone Number: (865)943-1111"}}
